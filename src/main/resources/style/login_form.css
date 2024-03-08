@@ -1,0 +1,28 @@
+#login_button:hover{
+    -fx-background-color: #2525ce;
+}
+#login_button{
+    -fx-background-color:  #5c60a8;
+    -fx-background-radius: 10px;
+}
+#login_button:pressed{
+    -fx-background-color: #5500a4;
+}
+
+#sign_button{
+    -fx-background-color: #5c60a8 ;
+    -fx-background-radius: 10px;
+}
+#sign_button:hover{
+    -fx-background-color:#2525ce ;
+}
+#sign_button:pressed{
+    -fx-background-color: #5500a4;
+}
+
+#forget_button{
+    -fx-background-color: transparent ;
+}
+#forget_button:pressed{
+    -fx-text-fill: blue;
+}
