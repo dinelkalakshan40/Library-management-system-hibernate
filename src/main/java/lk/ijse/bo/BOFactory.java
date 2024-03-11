@@ -1,7 +1,6 @@
 package lk.ijse.bo;
 
-import lk.ijse.bo.custom.impl.LoginBOImpl;
-import lk.ijse.bo.custom.impl.RegisterBOImpl;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 
 public class BOFactory {
 
@@ -15,15 +14,14 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        REGISTER, LOGIN
+        REGISTER, USER
     }
 
     public SuperBO getBO(BOTypes boTypes){
         switch (boTypes){
-            case LOGIN:
-                return new LoginBOImpl();
-            case REGISTER:
-                return new RegisterBOImpl();
+            case USER:
+                return new UserBOImpl();
+
             default:
                 return null;
         }

@@ -2,6 +2,7 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -10,7 +11,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BOFactory;
-import lk.ijse.bo.custom.LoginBO;
+import lk.ijse.bo.custom.UserBO;
+import lk.ijse.dao.DAOFactory;
+import lk.ijse.dao.custom.UserDAO;
+import lk.ijse.dto.UserDto;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,46 +28,75 @@ public class LoginFormController {
     public PasswordField passwordField;
     public TextField usernameTextField;
 
-    LoginBO loginBO=(LoginBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.LOGIN);
+    UserDAO userDAO=(UserDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.USER);
+
+    private lk.ijse.dto.UserDto UserDto;
+    private Object dto;
+
+    boolean username,password,email,number ;
+
+    public static String Gl0bUsrName;
 
     private void clearFields(){
             usernameTextField.setText("");
             passwordField.setText("");
     }
 
-    public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
-        String username=usernameTextField.getText();
-        String password=passwordField.getText();
-        try {
-            boolean login = loginBO.login(username, password);
-            if (username.isEmpty() || password.isEmpty()) {
-                new Alert(Alert.AlertType.ERROR, "Empty").show();
-                return;
-            }
-            if (login) {
-                AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("/view/dash_board.fxml"));
-                Scene scene = new Scene(anchorPane);
-                Stage stage = (Stage) this.login_button.getScene().getWindow();
-                stage.setScene(scene);
-                stage.centerOnScreen();
-            } else {
-                new Alert(Alert.AlertType.ERROR, "oops! credentials are wrong!").show();
-                clearFields();
-            }
-        }catch (SQLException e){
-            new Alert(Alert.AlertType.ERROR,e.getMessage());
-            clearFields();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+    public void btnLoginOnAction(ActionEvent actionEvent) throws Exception {
+        String username = usernameTextField.getText();
+        String password = passwordField.getText();
+
+        if(username.isEmpty() || password.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Username or Password Empty").show();
+            return;
         }
 
+        if (userDAO.checkPassword(username,password)){
+            Stage window = (Stage) this.login_button.getScene().getWindow();
+            window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/dash_board.fxml"))));
+            window.centerOnScreen();
+
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Please Check Username and password !!").show();
+        }
+
+        passwordField.clear();
+        usernameTextField.clear();
 
     }
 
-    public void btnSignOnAction(ActionEvent actionEvent) {
+    /*public void btnLoginOnAction(ActionEvent actionEvent){
+        if (username && password ){
+            UserDto isUser=userBO.getAllUsers(new UserDto(usernameTextField.getText(),passwordField.getText()));
+            if (isUser!=null){
+                Gl0bUsrName=usernameTextField.getText();
+
+                if (passwordField.getText().equals(isUser.getPassword())){
+                    try {
+                        Navigation.navigation(Rout.DASH_BOARD,root);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }else {
+                    Validation.pwValidation(pwTxt);
+                }
+            }else {
+                Validation.txtValidation(userNameTxt);
+            }
+        }
+    }*/
+
+    public void btnSignOnAction(ActionEvent actionEvent) throws IOException {
+        Stage window = (Stage) this.login_button.getScene().getWindow();
+        window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/registration-form.fxml"))));
+        window.centerOnScreen();
+
 
     }
-    public void btnForgetOnAction(ActionEvent actionEvent){
+    public void btnForgetOnAction(ActionEvent actionEvent) throws IOException {
+        Stage window = (Stage) this.forget_button.getScene().getWindow();
+        window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/forgot-password-form.fxml"))));
+        window.centerOnScreen();
         
     }
 }

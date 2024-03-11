@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="372.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
+<AnchorPane prefHeight="479.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="372.0" prefWidth="303.0" />
+      <Pane prefHeight="479.0" prefWidth="278.0" style="-fx-background-color: #404040;">
+         <children>
+            <ImageView fitHeight="159.0" fitWidth="170.0" layoutX="41.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-user-100 (1).png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text layoutX="317.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Registration" wrappingWidth="255.7265625">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Username" layoutX="304.0" layoutY="128.0" prefHeight="27.0" prefWidth="186.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+      <JFXButton fx:id="btnSubmit" layoutX="304.0" layoutY="358.0" onAction="#SubmitOnAction" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #404040;" text="Submit" textFill="WHITE" />
+      <Text fill="#0a0909" layoutX="304.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account? " wrappingWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="login_to_lognpage" layoutX="462.0" layoutY="421.0" onAction="#LogInOnAction" prefHeight="27.0" prefWidth="56.0" text="Log In" textFill="#222825">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="Password" layoutX="304.0" layoutY="194.0" prefHeight="25.0" prefWidth="186.0" promptText="Passowrd" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="Confirm_Password" layoutX="304.0" layoutY="261.0" prefHeight="25.0" prefWidth="186.0" promptText="Confirm Password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+      <JFXButton fx:id="reset_btn" layoutX="439.0" layoutY="358.0" onAction="#resetOnAction" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #404040;" text="Reset Passowrd" textFill="WHITE" />
    </children>
 </AnchorPane>
