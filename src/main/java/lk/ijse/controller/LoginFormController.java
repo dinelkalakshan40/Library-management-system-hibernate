@@ -56,6 +56,7 @@ public class LoginFormController {
             window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/dash_board.fxml"))));
             window.centerOnScreen();
 
+
         }else {
             new Alert(Alert.AlertType.ERROR,"Please Check Username and password !!").show();
         }
@@ -87,9 +88,11 @@ public class LoginFormController {
     }*/
 
     public void btnSignOnAction(ActionEvent actionEvent) throws IOException {
-        Stage window = (Stage) this.login_button.getScene().getWindow();
+        Stage window = (Stage) this.sign_button.getScene().getWindow();
         window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/registration-form.fxml"))));
         window.centerOnScreen();
+
+
 
 
     }

@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
+<AnchorPane prefHeight="526.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
    <children>
-      <Label layoutX="191.0" layoutY="66.0" prefHeight="41.0" prefWidth="168.0" text="Dashboard ">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#90caf9" height="123.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" width="890.0" />
+      <Label fx:id="lblUsername" layoutX="37.0" layoutY="43.0" prefHeight="38.0" prefWidth="164.0" text="Welcome Admin">
          <font>
-            <Font size="29.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
+      <JFXButton fx:id="btn_book" contentDisplay="GRAPHIC_ONLY" layoutX="393.0" layoutY="22.0" onAction="#btnBookOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#d01717" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
+         <graphic>
+            <ImageView fitHeight="74.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-books-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="arc_main" layoutX="-3.0" layoutY="123.0" prefHeight="413.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="533.0" layoutX="30.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Top-5-Benefits-of-Library-Management-System-for-Education-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="566.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="205.22412109375">
+               <font>
+                  <Font name="System Bold Italic" size="43.0" />
+               </font>
+            </Text>
+            <Text layoutX="621.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To the" wrappingWidth="109.318359375">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font>
+            </Text>
+            <Text layoutX="566.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BookWorm" wrappingWidth="239.13671875">
+               <font>
+                  <Font name="System Bold Italic" size="43.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="706.0" layoutY="314.0" prefHeight="65.0" prefWidth="123.0" text="Logout" textFill="#37347c">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8-logout-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

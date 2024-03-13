@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="466.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;" stylesheets="@../style/book.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookFormController">
+   <children>
+      <Text layoutX="360.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book-Management" wrappingWidth="262.13671875">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextField layoutX="129.0" layoutY="100.0" />
+      <Text layoutX="31.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book-ID">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="58.40234375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField layoutX="129.0" layoutY="163.0" />
+      <Text layoutX="31.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" wrappingWidth="72.1875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField layoutX="129.0" layoutY="220.0" />
+      <Text layoutX="31.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="72.1875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField layoutX="123.0" layoutY="279.0" />
+      <Text layoutX="31.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="72.1875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField layoutX="123.0" layoutY="326.0" />
+      <JFXButton layoutX="42.0" layoutY="381.0" prefHeight="36.0" prefWidth="61.0" text="Add" textFill="#0d186b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
