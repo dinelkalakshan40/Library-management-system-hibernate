@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
@@ -31,6 +32,11 @@ public class UserDAOImpl implements UserDAO {
         transaction.commit();
         session.close();
         return true;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException, ClassNotFoundException, IOException {
+        return false;
     }
 
     @Override

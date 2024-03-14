@@ -78,7 +78,7 @@
          </font>
       </JFXButton>
       <JFXComboBox fx:id="status" focusColor="BLACK" layoutX="125.0" layoutY="327.0" prefHeight="25.0" prefWidth="180.0" unFocusColor="BLACK" />
-      <TableView fx:id="tblbook" layoutX="342.0" layoutY="119.0" prefHeight="384.0" prefWidth="537.0">
+      <TableView fx:id="tblbook" layoutX="342.0" layoutY="119.0" onMouseClicked="#rowOnMouseClicked" prefHeight="384.0" prefWidth="537.0">
         <columns>
           <TableColumn fx:id="colBookid" prefWidth="118.0" text="Book-ID" />
           <TableColumn fx:id="colTitle" prefWidth="110.0" text="Title" />
