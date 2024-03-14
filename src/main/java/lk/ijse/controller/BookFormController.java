@@ -26,13 +26,13 @@ public class BookFormController implements Initializable {
     public TextField title;
     public TextField author;
     public TextField Genre;
-    public JFXComboBox status;
+    public JFXComboBox<String> status;
     public TableView tblbook;
-    public TableColumn colBookid;
-    public TableColumn colTitle;
-    public TableColumn colAuthor;
-    public TableColumn colGenre;
-    public TableColumn colStatus;
+    public TableColumn<?,?> colBookid;
+    public TableColumn<?,?> colTitle;
+    public TableColumn<?,?> colAuthor;
+    public TableColumn<?,?> colGenre;
+    public TableColumn<?,?> colStatus;
 
     BookBO bookBO = (BookBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BOOK);
     ObservableList<Book> observableList;
