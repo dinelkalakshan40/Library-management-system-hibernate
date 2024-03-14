@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="466.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;" stylesheets="@../style/book.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookFormController">
+<AnchorPane prefHeight="515.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;" stylesheets="@../style/book.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookFormController">
    <children>
       <Text layoutX="360.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book-Management" wrappingWidth="262.13671875">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Text>
-      <TextField layoutX="129.0" layoutY="100.0" />
+      <TextField fx:id="book_id" layoutX="129.0" layoutY="100.0" prefHeight="32.0" prefWidth="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
       <Text layoutX="31.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book-ID">
          <font>
             <Font size="17.0" />
@@ -25,29 +30,62 @@
             <Font size="17.0" />
          </font>
       </Text>
-      <TextField layoutX="129.0" layoutY="163.0" />
+      <TextField fx:id="title" layoutX="129.0" layoutY="163.0" prefHeight="32.0" prefWidth="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
       <Text layoutX="31.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" wrappingWidth="72.1875">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <TextField layoutX="129.0" layoutY="220.0" />
+      <TextField fx:id="author" layoutX="129.0" layoutY="220.0" prefHeight="32.0" prefWidth="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
       <Text layoutX="31.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="72.1875">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <TextField layoutX="123.0" layoutY="279.0" />
+      <TextField fx:id="Genre" layoutX="129.0" layoutY="279.0" prefHeight="32.0" prefWidth="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
       <Text layoutX="31.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="72.1875">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <TextField layoutX="123.0" layoutY="326.0" />
-      <JFXButton layoutX="42.0" layoutY="381.0" prefHeight="36.0" prefWidth="61.0" text="Add" textFill="#0d186b">
+      <JFXButton layoutX="53.0" layoutY="388.0" onAction="#btnAdd" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #7986cb; -fx-background-radius: 10px;" text="Add" textFill="#0d186b">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXButton>
+      <JFXButton layoutX="170.0" layoutY="388.0" onAction="#btnUpdate" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #7986cb; -fx-background-radius: 10px;" text="Update" textFill="#0d186b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="53.0" layoutY="450.0" onAction="#btnDelete" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #7986cb; -fx-background-radius: 10px;" text="Delete" textFill="#0d186b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="170.0" layoutY="450.0" onAction="#btnClear" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #7986cb; -fx-background-radius: 10px;" text="Clear" textFill="#0d186b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="status" focusColor="BLACK" layoutX="125.0" layoutY="327.0" prefHeight="25.0" prefWidth="180.0" unFocusColor="BLACK" />
+      <TableView fx:id="tblbook" layoutX="342.0" layoutY="119.0" prefHeight="384.0" prefWidth="537.0">
+        <columns>
+          <TableColumn fx:id="colBookid" prefWidth="118.0" text="Book-ID" />
+          <TableColumn fx:id="colTitle" prefWidth="110.0" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="104.0" text="Author" />
+            <TableColumn fx:id="colGenre" prefWidth="105.0" text="Genre" />
+            <TableColumn fx:id="colStatus" prefWidth="99.0" text="Status" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
