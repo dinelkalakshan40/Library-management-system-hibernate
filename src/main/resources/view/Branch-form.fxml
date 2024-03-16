@@ -40,7 +40,7 @@
       </Label>
       <TextField fx:id="txtbranch_Manger" layoutX="136.0" layoutY="252.0" />
       <TextField fx:id="txtContact" layoutX="136.0" layoutY="302.0" />
-      <TableView fx:id="tblbranch" layoutX="368.0" layoutY="145.0" prefHeight="307.0" prefWidth="489.0">
+      <TableView fx:id="tblbranch" layoutX="368.0" layoutY="145.0" onMouseClicked="#rowOnMouseClicked" prefHeight="307.0" prefWidth="489.0">
         <columns>
           <TableColumn fx:id="colbranch_id" prefWidth="125.0" text="branch_id" />
           <TableColumn fx:id="colbranch_Name" prefWidth="130.0" text="branch_name" />

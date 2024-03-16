@@ -66,5 +66,14 @@
             </JFXButton>
          </children>
       </AnchorPane>
+      <JFXButton fx:id="btn_branch" contentDisplay="GRAPHIC_ONLY" layoutX="552.0" layoutY="23.0" onAction="#btnBranchOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#bf2323" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
+         <graphic>
+            <ImageView fitHeight="82.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-office-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>
