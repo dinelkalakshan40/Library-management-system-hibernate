@@ -1,9 +1,7 @@
-package lk.ijse.dto;
+package lk.ijse.entity;
 
-import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
+public class Transction {
 
-public class TransactionDto {
     private String id;
     private String user;
 
@@ -16,7 +14,7 @@ public class TransactionDto {
 
     private String  contact;
 
-    public TransactionDto(String id, String user, Branch branch, Book book, String date, String contact) {
+    public Transction(String id, String user, Branch branch, Book book, String date, String contact) {
         this.id = id;
         this.user = user;
         this.branch = branch;
@@ -25,7 +23,7 @@ public class TransactionDto {
         this.contact = contact;
     }
 
-    public TransactionDto() {
+    public Transction() {
     }
 
     public String getId() {
@@ -78,7 +76,7 @@ public class TransactionDto {
 
     @Override
     public String toString() {
-        return "TransactionDto{" +
+        return "Transaction{" +
                 "id='" + id + '\'' +
                 ", user='" + user + '\'' +
                 ", branch=" + branch +
