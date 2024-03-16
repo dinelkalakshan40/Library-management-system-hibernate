@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="515.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BranchFormController">
+   <children>
+      <TextField fx:id="txtbranch_Id" layoutX="136.0" layoutY="145.0" />
+      <Text layoutX="308.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch-Manage" wrappingWidth="243.0">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <Label layoutX="27.0" layoutY="145.0" prefHeight="26.0" prefWidth="89.0" text="Branch-ID">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="202.0" prefHeight="26.0" prefWidth="110.0" text="Branch_name">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbranch_Name" layoutX="136.0" layoutY="190.0" />
+      <Label layoutX="21.0" layoutY="251.0" prefHeight="26.0" prefWidth="89.0" text="Manager">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="301.0" prefHeight="26.0" prefWidth="89.0" text="Contact">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbranch_Manger" layoutX="136.0" layoutY="252.0" />
+      <TextField fx:id="txtContact" layoutX="136.0" layoutY="302.0" />
+      <TableView fx:id="tblbranch" layoutX="368.0" layoutY="145.0" prefHeight="307.0" prefWidth="489.0">
+        <columns>
+          <TableColumn fx:id="colbranch_id" prefWidth="125.0" text="branch_id" />
+          <TableColumn fx:id="colbranch_Name" prefWidth="130.0" text="branch_name" />
+            <TableColumn fx:id="colManager" prefWidth="122.0" text="Manager" />
+            <TableColumn fx:id="colContact" prefWidth="111.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAdd" layoutX="33.0" layoutY="374.0" onAction="#btnAddOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #3f51b5; -fx-background-radius: 10px;" text="Add" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" layoutX="157.0" layoutY="374.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #3f51b5; -fx-background-radius: 10px;" text="Update" textFill="WHITE" />
+      <JFXButton fx:id="btnDelete" layoutX="33.0" layoutY="432.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #3f51b5; -fx-background-radius: 10px;" text="Delete" textFill="WHITE" />
+      <JFXButton fx:id="btnClear" layoutX="161.0" layoutY="432.0" onAction="#btnClearOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #3f51b5; -fx-background-radius: 10px;" text="Clear" textFill="WHITE" />
+   </children>
+</AnchorPane>

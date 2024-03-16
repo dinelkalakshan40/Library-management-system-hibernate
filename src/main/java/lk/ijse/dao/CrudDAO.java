@@ -13,4 +13,6 @@ public interface CrudDAO<T> extends SuperDAO{
 
     public List<T> getAll() throws Exception;
 
+
+
 }
