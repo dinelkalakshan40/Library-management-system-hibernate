@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="578.0" prefWidth="1071.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.TransactionFormController">
+   <children>
+      <Text fill="#5177e0" layoutX="436.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Manage" wrappingWidth="280.447265625">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Label layoutX="21.0" layoutY="130.0" prefHeight="26.0" prefWidth="130.0" text="Transaction-ID">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="171.0" prefHeight="26.0" prefWidth="100.0" text="Book-User">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="211.0" prefHeight="26.0" prefWidth="92.0" text="Branch-Id">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="252.0" prefHeight="26.0" prefWidth="100.0" text="Book-Id">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="298.0" prefHeight="26.0" prefWidth="100.0" text="Due-to-date">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="338.0" prefHeight="26.0" prefWidth="100.0" text="Contact">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_trans_ID" layoutX="161.0" layoutY="131.0" prefHeight="25.0" prefWidth="146.0" />
+      <TextField fx:id="txt_user" layoutX="161.0" layoutY="172.0" prefHeight="25.0" prefWidth="146.0" />
+      <TextField fx:id="txtcontact" layoutX="159.0" layoutY="339.0" prefHeight="25.0" prefWidth="146.0" />
+      <DatePicker fx:id="txtdate" layoutX="159.0" layoutY="299.0" prefHeight="25.0" prefWidth="146.0" />
+      <JFXComboBox fx:id="txtbranch_Id" layoutX="159.0" layoutY="212.0" prefHeight="25.0" prefWidth="146.0" />
+      <TableView fx:id="tblTrans" layoutX="370.0" layoutY="164.0" prefHeight="348.0" prefWidth="689.0">
+        <columns>
+          <TableColumn fx:id="coltrans_Id" prefWidth="103.0" text="Transaction-ID" />
+          <TableColumn fx:id="colbookUser" prefWidth="127.0" text="Book-User" />
+            <TableColumn fx:id="colbranchId" prefWidth="113.0" text="Brach-ID" />
+            <TableColumn fx:id="colbookId" prefWidth="110.0" text="Book_ID" />
+            <TableColumn fx:id="colDate" prefWidth="124.0" text="Due-to-date" />
+            <TableColumn fx:id="colContact" prefWidth="111.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="txtbook_id" layoutX="159.0" layoutY="253.0" prefHeight="25.0" prefWidth="146.0" />
+      <Button fx:id="btnAdd" layoutX="67.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #9575cd; -fx-background-radius: 10px;" text="Add" textFill="WHITE" />
+      <Button fx:id="btnUpdate" layoutX="204.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #9575cd; -fx-background-radius: 10px;" text="Update" textFill="WHITE" />
+      <Button fx:id="btnDelete" layoutX="72.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #9575cd; -fx-background-radius: 10px;" text="Delete" textFill="WHITE" />
+      <Button fx:id="btnClear" layoutX="208.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #9575cd; -fx-background-radius: 10px;" text="Clear" textFill="WHITE" />
+   </children>
+</AnchorPane>
