@@ -11,7 +11,8 @@ public interface BranchBO extends SuperBO {
 
 
 
-    List<BranchDto> getAllBranches() throws Exception;
+
+   public List<BranchDto> getAllBranches() throws Exception;
 
     boolean saveBranch(BranchDto dto) throws Exception;
 
