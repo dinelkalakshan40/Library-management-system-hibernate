@@ -13,7 +13,7 @@ public class Transction {
     private Branch branch;
 
     @ManyToOne
-    private Book book;
+    private Book book;      /*Owning side*/
 
     private String date;
 

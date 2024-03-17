@@ -19,6 +19,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BookFormController implements Initializable {
 
@@ -76,23 +78,62 @@ public class BookFormController implements Initializable {
         tblbook.setItems(observableList);
     }
     public void btnAdd(ActionEvent actionEvent) throws Exception {
-        String id=book_id.getText();
+        boolean isBookValid = validateBook();
+
+        if(isBookValid) {
+            String id = book_id.getText();
+            String Ttle = title.getText();
+            String Athor = author.getText();
+            String Gnre = Genre.getText();
+            String Stus = status.getValue();
+
+            if (bookBO.saveBook(new BookDto(id, Ttle, Athor, Gnre, Stus))) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved!!").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Error!!").show();
+            }
+            clearTextFileds();
+            generateNextBookId();
+            getAll();
+        }
+
+    }
+    private boolean validateBook(){
         String Ttle =  title.getText();
         String Athor = author.getText();
         String Gnre = Genre.getText();
         String Stus = status.getValue();
 
-        if (bookBO.saveBook(new BookDto(id, Ttle, Athor,Gnre,Stus))) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved!!").show();
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Error!!").show();
+        Pattern titlePattern = Pattern.compile("[A-Za-z]{2,}");
+        Matcher titleMatcher = titlePattern.matcher(Ttle);
+        boolean titleMatches = titleMatcher.matches();
+        if (!titleMatches) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Book Title").show();
+            return false;
         }
-        clearTextFileds();
-        generateNextBookId();
-        getAll();
+
+        Pattern athorPattern = Pattern.compile("[A-Za-z]{2,}");
+        Matcher athorMatcher = athorPattern.matcher(Athor);
+        boolean athorMatches = athorMatcher.matches();
+        if (!athorMatches) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Athor Name").show();
+            return false;
+        }
+
+        Pattern gnrePattern = Pattern.compile("[A-Za-z]{2,}");
+        Matcher gnreMatcher = gnrePattern.matcher(Gnre);
+        boolean gnreMatches = gnreMatcher.matches();
+        if (!gnreMatches) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Gnre").show();
+            return false;
+        }
 
 
+
+        return true;
     }
+
+
     public void clearTextFileds(){
       //  book_id.clear();
         title.clear();

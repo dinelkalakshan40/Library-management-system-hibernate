@@ -20,7 +20,7 @@ public class Book {
 
     private String status;
 
-    @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)  /*Inverse side*/
     private List<Transction> transctions=new ArrayList<>();
 
     public Book(String id, String title, String author, String genre, String status) {
