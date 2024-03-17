@@ -1,13 +1,18 @@
 package lk.ijse.entity;
 
-public class Transction {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
+@Entity
+public class Transction {
+    @Id
     private String id;
     private String user;
-
+    @ManyToOne
     private Branch branch;
 
-
+    @ManyToOne
     private Book book;
 
     private String date;

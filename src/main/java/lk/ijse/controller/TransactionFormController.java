@@ -54,6 +54,7 @@ public class TransactionFormController implements Initializable {
     String ID;
 
     Branch branch =new Branch();
+
     Book book = new Book();
 
     @Override
@@ -137,7 +138,27 @@ public class TransactionFormController implements Initializable {
 
 
 
-    public void btnAddOnAction(ActionEvent actionEvent) {
+    public void btnAddOnAction(ActionEvent actionEvent) throws Exception {
+        String id = txt_trans_ID.getText();
+        String user=txt_user.getText();
+        String branch_id = txtbranch_Id.getValue();
+        String book_id = txtbook_id.getValue();
+        String date = String.valueOf(txtdate.getValue());
+        String contact = txtcontact.getText();
+
+
+       branch.setId(branch_id);
+       book.setId(book_id);
+
+        if (transactionBO.saveTransaction(new TransactionDto(id, user, branch, book, date,contact))) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Saved!!").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Error!!").show();
+        }
+
+
+        generateNextUserId();
+        getAll();
 
     }
 

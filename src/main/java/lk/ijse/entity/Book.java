@@ -2,6 +2,9 @@ package lk.ijse.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Book {
@@ -14,6 +17,9 @@ public class Book {
     private String genre;
 
     private String status;
+
+    @OneToMany(mappedBy = "book")
+    private List<Transction> transctions;
 
     public Book(String id, String title, String author, String genre, String status) {
         this.id = id;

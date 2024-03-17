@@ -2,6 +2,9 @@ package lk.ijse.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Branch {
@@ -13,6 +16,9 @@ public class Branch {
     private String manager;
 
     private String contact;
+
+    @OneToMany(mappedBy = "branch")
+    private List<Transction> transctions;
 
     public Branch() {
     }
