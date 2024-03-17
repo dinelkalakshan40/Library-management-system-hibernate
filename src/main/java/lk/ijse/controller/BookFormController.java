@@ -78,6 +78,7 @@ public class BookFormController implements Initializable {
         tblbook.setItems(observableList);
     }
     public void btnAdd(ActionEvent actionEvent) throws Exception {
+
         boolean isBookValid = validateBook();
 
         if(isBookValid) {
