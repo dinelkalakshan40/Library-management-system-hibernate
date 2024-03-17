@@ -53,7 +53,7 @@
       <TextField fx:id="txtcontact" layoutX="159.0" layoutY="339.0" prefHeight="25.0" prefWidth="146.0" />
       <DatePicker fx:id="txtdate" layoutX="159.0" layoutY="299.0" prefHeight="25.0" prefWidth="146.0" />
       <JFXComboBox fx:id="txtbranch_Id" layoutX="159.0" layoutY="212.0" prefHeight="25.0" prefWidth="146.0" />
-      <TableView fx:id="tblTrans" layoutX="370.0" layoutY="164.0" prefHeight="326.0" prefWidth="689.0">
+      <TableView fx:id="tblTrans" layoutX="370.0" layoutY="164.0" onMouseClicked="#rowOnMouseClicked" prefHeight="326.0" prefWidth="689.0">
         <columns>
           <TableColumn fx:id="coltrans_Id" prefWidth="103.0" text="Transaction-ID" />
           <TableColumn fx:id="colbookUser" prefWidth="127.0" text="Book-User" />

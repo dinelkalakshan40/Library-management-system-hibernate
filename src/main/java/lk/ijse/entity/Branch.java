@@ -1,9 +1,11 @@
 package lk.ijse.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,8 +19,8 @@ public class Branch {
 
     private String contact;
 
-    @OneToMany(mappedBy = "branch")
-    private List<Transction> transctions;
+    @OneToMany(mappedBy = "branch",cascade = CascadeType.ALL)
+    private List<Transction> transctions= new ArrayList<>();
 
     public Branch() {
     }
