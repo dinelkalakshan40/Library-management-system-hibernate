@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.TransactionBO;
+import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.BookDAO;
 import lk.ijse.dao.custom.BranchDAO;
 import lk.ijse.dao.custom.TransactionDAO;
@@ -44,14 +45,14 @@ public class TransactionFormController implements Initializable {
     public TableColumn colContact;
 
     TransactionBO transactionBO=(TransactionBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TRANSACTION);
-    TransactionDAO transactionDAO=(TransactionDAO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TRANSACTION);
+    TransactionDAO transactionDAO=(TransactionDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.TRANSACTION);
 
-    BranchDAO branchDAO=(BranchDAO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BRANCH);
+   // BranchDAO branchDAO=(BranchDAO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BRANCH);
 
-    BookDAO bookDAO=(BookDAO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BOOK);
+  //  BookDAO bookDAO=(BookDAO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BOOK);
 
     ObservableList<Transction> observableList;
-    String ID;
+   // String ID;
 
     Branch branch =new Branch();
 

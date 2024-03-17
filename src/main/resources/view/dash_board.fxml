@@ -12,13 +12,13 @@
 
 <AnchorPane prefHeight="526.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#90caf9" height="123.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" width="890.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#90caf9" height="123.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" width="1068.0" />
       <Label fx:id="lblUsername" layoutX="37.0" layoutY="43.0" prefHeight="38.0" prefWidth="164.0" text="Welcome Admin">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btn_book" contentDisplay="GRAPHIC_ONLY" layoutX="393.0" layoutY="22.0" onAction="#btnBookOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#d01717" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
+      <JFXButton fx:id="btn_book" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="23.0" onAction="#btnBookOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#d01717" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
          <graphic>
             <ImageView fitHeight="74.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,29 +30,29 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <AnchorPane fx:id="arc_main" layoutX="-3.0" layoutY="123.0" prefHeight="515.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;">
+      <AnchorPane fx:id="arc_main" layoutX="-3.0" layoutY="123.0" prefHeight="525.0" prefWidth="1071.0" style="-fx-background-color: #c5cae9;">
          <children>
-            <ImageView fitHeight="288.0" fitWidth="513.0" layoutX="20.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="414.0" fitWidth="618.0" layoutX="20.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Top-5-Benefits-of-Library-Management-System-for-Education-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="556.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="205.22412109375">
+            <Text layoutX="644.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="205.22412109375">
                <font>
                   <Font name="System Bold Italic" size="43.0" />
                </font>
             </Text>
-            <Text layoutX="621.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To the" wrappingWidth="109.318359375">
+            <Text layoutX="709.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To the" wrappingWidth="109.318359375">
                <font>
                   <Font name="System Bold Italic" size="31.0" />
                </font>
             </Text>
-            <Text layoutX="556.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BookWorm" wrappingWidth="239.13671875">
+            <Text layoutX="644.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BookWorm" wrappingWidth="239.13671875">
                <font>
                   <Font name="System Bold Italic" size="43.0" />
                </font>
             </Text>
-            <JFXButton layoutX="700.0" layoutY="349.0" prefHeight="65.0" prefWidth="123.0" text="Logout" textFill="#37347c">
+            <JFXButton layoutX="920.0" layoutY="422.0" prefHeight="65.0" prefWidth="123.0" text="Logout" textFill="#37347c">
                <graphic>
                   <ImageView fitHeight="57.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -66,11 +66,20 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="btn_branch" contentDisplay="GRAPHIC_ONLY" layoutX="552.0" layoutY="23.0" onAction="#btnBranchOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#bf2323" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
+      <JFXButton fx:id="btn_branch" contentDisplay="GRAPHIC_ONLY" layoutX="605.0" layoutY="24.0" onAction="#btnBranchOnAction" prefHeight="78.0" prefWidth="78.0" ripplerFill="#bf2323" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
          <graphic>
             <ImageView fitHeight="82.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/icons8-office-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_transaction" contentDisplay="GRAPHIC_ONLY" layoutX="823.0" layoutY="21.0" onAction="#btnTransactionOnAction" ripplerFill="#f25f5f" style="-fx-background-color: #42a5f5; -fx-background-radius: 20px;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-users-64.png" />
                </image>
             </ImageView>
          </graphic>

@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="515.0" prefWidth="893.0" style="-fx-background-color: #c5cae9;" stylesheets="@../style/book.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookFormController">
+<AnchorPane prefHeight="525.0" prefWidth="1071.0" style="-fx-background-color: #c5cae9;" stylesheets="@../style/book.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookFormController">
    <children>
       <Text layoutX="360.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book-Management" wrappingWidth="262.13671875">
          <font>
@@ -78,13 +78,13 @@
          </font>
       </JFXButton>
       <JFXComboBox fx:id="status" focusColor="BLACK" layoutX="125.0" layoutY="327.0" prefHeight="25.0" prefWidth="180.0" unFocusColor="BLACK" />
-      <TableView fx:id="tblbook" layoutX="342.0" layoutY="119.0" onMouseClicked="#rowOnMouseClicked" prefHeight="384.0" prefWidth="537.0">
+      <TableView fx:id="tblbook" layoutX="342.0" layoutY="119.0" onMouseClicked="#rowOnMouseClicked" prefHeight="384.0" prefWidth="650.0">
         <columns>
-          <TableColumn fx:id="colBookid" prefWidth="118.0" text="Book-ID" />
-          <TableColumn fx:id="colTitle" prefWidth="110.0" text="Title" />
-            <TableColumn fx:id="colAuthor" prefWidth="104.0" text="Author" />
-            <TableColumn fx:id="colGenre" prefWidth="105.0" text="Genre" />
-            <TableColumn fx:id="colStatus" prefWidth="99.0" text="Status" />
+          <TableColumn fx:id="colBookid" prefWidth="140.0" text="Book-ID" />
+          <TableColumn fx:id="colTitle" prefWidth="124.0" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="128.0" text="Author" />
+            <TableColumn fx:id="colGenre" prefWidth="129.0" text="Genre" />
+            <TableColumn fx:id="colStatus" prefWidth="128.0" text="Status" />
         </columns>
       </TableView>
    </children>
